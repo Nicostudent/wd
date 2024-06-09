@@ -29,7 +29,7 @@ export const Home = ({
     window.addEventListener("resize", handleResize);
   });
   return (
-    <div className="h-screen border-4 border-red-500">
+    <div className="h-screen ">
       {isMobile ? (
         <div >
           <div className="flex justify-start gap-10">

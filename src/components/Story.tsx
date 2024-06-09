@@ -29,7 +29,7 @@ export const Story = ({ title, storie, image }: StoryProps) => {
 
   return (
     <div
-      className="h-screen flex justify-center items-center border-4 border-blue-500"
+      className="h-screen flex justify-center items-center "
       id="Story"
     >
       {isMobile ? (
