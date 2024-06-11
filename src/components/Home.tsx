@@ -9,6 +9,24 @@ export const Home = () => {
   const isMobile = UseWindowSize();
   const [sepia, setSepia] = useState(false);
 
+  const fontFamilies = ['Arial', 'Gwendolyn', 'Dosis', 'British-bounce', 'Times New Roman', "Merriweather", "Alice", "Garamond", "Kalam", "Dancing", "Smooch"];
+
+  const [titleFontIndex, setTitleFontIndex] = useState(0);
+  const [dayFontIndex, setDayFontIndex] = useState(0);
+  const [hourFontIndex, setHourFontIndex] = useState(0);
+
+  // Function to handle font change for each text element
+  const handleTitleFontChange = () => {
+    setTitleFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
+  };
+
+  const handleDayFontChange = () => {
+    setDayFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
+  };
+
+  const handleHourFontChange = () => {
+    setHourFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
+  };
   return (
     <div className="h-screen">
       {isMobile ? (
@@ -26,7 +44,7 @@ export const Home = () => {
             alt="flowers"
           />
           <div className="flex justify-center  absolute top-20 left-10 right-0 bottom-0 m-auto z-10 ">
-            <div className="flex flex-col h-fit text-center gap-5">
+            <div  className="flex flex-col h-fit text-center gap-5 cursor-pointer">
               <span className="font-mono">05.08.2024</span>
               <span className="text-3xl">Save The Date</span>
             </div>
@@ -56,12 +74,12 @@ export const Home = () => {
                 src={flowers}
                 alt=""
               />
-              <div className="flex flex-col text-start pl-10">
-                <span className="font-mono text-3xl my-10 pl-2 md:text-center">
+              <div className="flex flex-col text-start pl-10 cursor-pointer"  >
+                <span style={{ fontFamily: fontFamilies[titleFontIndex] }}    onClick={handleTitleFontChange}  className="font-mono text-3xl my-10 pl-2 md:text-center">
                   05.08.2024
                 </span>
-                <span className="text-9xl">Save The Date</span>
-                <span className="text-4xl font-light font-mono mt-10 w-2/3">
+                <span style={{ fontFamily: fontFamilies[dayFontIndex] }}    onClick={handleDayFontChange}  className="text-9xl">Save The Date</span>
+                <span style={{ fontFamily: fontFamilies[hourFontIndex] }}    onClick={handleHourFontChange}  className="text-4xl font-light font-mono mt-10 w-2/3">
                   NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
                 </span>
               </div>

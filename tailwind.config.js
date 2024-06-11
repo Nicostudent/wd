@@ -13,6 +13,12 @@ export default {
         "Gwendolyn" : ["Gwendolyn", "cursive"],
         "Dosis": ["Dosis", "sans-serif"],
         "British-bounce": ["Birthstone Bounce", "cursive"],
+        "Merriweather": ["Merriweather", "serif"],
+        "Alice": ["Alice", "serif"],
+        "Garamond":["EB Garamond", "serif"],
+        "Kalam": ["Kalam", "cursive"],
+        "Dancing": ["Dancing Script", "cursive"],
+        "Smooch": ["Smooch", "cursive"]
       },
       sepia: {
         25: '.25',
