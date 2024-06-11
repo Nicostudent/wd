@@ -57,7 +57,7 @@ export const Home = () => {
                 alt=""
               />
               <div className="flex flex-col text-start pl-10">
-                <span className="font-mono text-3xl my-10 pl-2">
+                <span className="font-mono text-3xl my-10 pl-2 md:text-center">
                   05.08.2024
                 </span>
                 <span className="text-9xl">Save The Date</span>
