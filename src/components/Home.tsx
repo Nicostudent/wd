@@ -1,92 +1,80 @@
-import { NavBar } from "./NavBar";
-import SepiaGrisHome from "../assets/images/SepiaGrisHome.jpg";
-import { useEffect, useState } from "react";
-import { Burger } from "../utils/icons/Burger";
+import GastoniPuerto from "../assets/images/GastoniPuerto.jpg";
+import { UseWindowSize } from "../utils/custom hooks/UseWindowSize";
+import { WebNavBar } from "./WebNavBar";
+import { MobileNavBar } from "./MobileNavBar";
+import flowers from "../assets/vectorsPNG/flowers.png";
+import { useState } from "react";
 
-export const Home = ({
-  she,
-  he,
-  date,
-  city,
-}: {
-  she: string;
-  he: string;
-  date: string;
-  city: string;
-}) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 720);
+export const Home = () => {
+  const isMobile = UseWindowSize();
+  const [sepia, setSepia] = useState(false);
 
-  const handleResize = () => {
-    if (window.innerWidth < 720) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  // create an event listener
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
   return (
-    <div className="h-screen ">
+    <div className="h-screen">
       {isMobile ? (
-        <div >
-          <div className="flex justify-start gap-10">
-            <Burger />
-            <span>S&G</span>
+        <div id="home" className="absolute max-h-screen">
+          <div className="flex justify-between gap-10 p-1 ">
+            <MobileNavBar />
+            <span className="self-center text-center justify-center font-Dosis font-bold ">
+              S&G
+            </span>
+            <span></span>
           </div>
-          <div className="flex justify-center">
+          <img
+            className="rotate-45 relative top-5 right-10 overflow-hidden w-20"
+            src={flowers}
+            alt="flowers"
+          />
+          <div className="flex justify-center  absolute top-20 left-10 right-0 bottom-0 m-auto z-10 ">
+            <div className="flex flex-col h-fit text-center gap-5">
+              <span className="font-mono">05.08.2024</span>
+              <span className="text-3xl">Save The Date</span>
+            </div>
+          </div>
+          <div className="flex justify-center ">
+            <span className="text-xl font-light font-mono flex justify-center mx-6 mt-10">
+              NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
+            </span>
+          </div>
+          <div className="flex justify-center mt-10">
             <img
-              className="object-scale-down  w-3/3 rounded-md"
-              src={SepiaGrisHome}
-              alt="asd"
+              onClick={() => setSepia(!sepia)}
+              className={`w-11/12 rounded-3xl ${
+                sepia ? "sepia-[.75] " : ""
+              } pb-2 z-50`}
+              src={GastoniPuerto}
+              alt=""
             />
           </div>
-          <div id="home" className="flex flex-col justify-start items-center ">
-            <div className="flex flex-col justify-center items-center">
-              <span className="text-7xl font-light font-Gwendolyn">
-                Our Day
-              </span>
-              <span className="text-slate-900 opacity-70 text-4xl font-bold mb-2">
-                {she} & {he}
-              </span>
-            </div>
-            <div className="text-slate-900 opacity-70 flex flex-col text-lg font-light justify-center items-center mb-16">
-              <span>
-                {date} * {city}
-              </span>
-              <span>82 Days to Go!</span>
-            </div>
-          </div>          
         </div>
       ) : (
-        <div>
-          <div id="home" className="flex flex-col justify-start items-center ">
-            <div className="flex flex-col gap-10 justify-center items-center">
-              <span className="text-9xl font-light mt-24 font-Gwendolyn">
-                Our Day
-              </span>
-              <span className="text-slate-900 opacity-70 text-6xl font-bold mb-5">
-                {she} & {he}
-              </span>
+        <div className="flex justify-end items-start w-full">
+          <div className="w-10/12 flex items-center  relative">
+            <div className="w-6/12 lex justify-center ">
+              <img
+                className="rotate-45 absolute top-0 left-0 right-10 "
+                src={flowers}
+                alt=""
+              />
+              <div className="flex flex-col text-start pl-10">
+                <span className="font-mono text-3xl my-10 pl-2">
+                  05.08.2024
+                </span>
+                <span className="text-9xl">Save The Date</span>
+                <span className="text-4xl font-light font-mono mt-10 w-2/3">
+                  NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
+                </span>
+              </div>
             </div>
-            <div className="text-slate-900 opacity-70 flex flex-col text-lg font-light justify-center items-center mb-16">
-              <span>
-                {date} * {city}
-              </span>
-              <span>82 Days to Go!</span>
-            </div>
-          </div>
-          <div className="mb-10 ">
-            <NavBar />
-          </div>
-          <div className="flex justify-center">
             <img
-              className="object-scale-down h-4/5 w-1/3 rounded-md"
-              src={SepiaGrisHome}
+              className={`w-5/12 rounded-md ${sepia ? "sepia-[.75] " : ""} pb-2 z-50`}
+              onClick={() => setSepia(!sepia)}
+              src={GastoniPuerto}
               alt="asd"
             />
+          </div>
+          <div className="absolute bottom-10 left-0 right-0 m-auto ">
+            <WebNavBar />
           </div>
         </div>
       )}

@@ -20,8 +20,8 @@ export const RegistryForm = () => {
   // };
 
   return (
-    <div className="h-screen flex justify-center items-center " id="Registry">
-      <form  className="flex flex-col bg-transparent bg-opacity-80 p-8 rounded-lg shadow-2xl shadow-black ">
+    <div className="h-screen flex justify-center items-center mb-20 " id="Registry">
+      <form  className="flex w-11/12 md:w-1/3 flex-col bg-transparent bg-opacity-80 p-8 rounded-lg shadow-xl shadow-slate-400 ">
         <span className="text-3xl font-Gwendolyn mb-6 font-semibold text-center">Confirma tu asistencia</span>
         <label className="mb-2 font-semibold">
           Nombre y Apellido:
