@@ -1,51 +1,49 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./components/Home";
-import { EventDetails } from "./components/EventDetails";
-import { RegistryForm } from "./components/RegistryForm";
-import { Present } from "./components/Present";
-import church from './assets/images/church.jpg';
-import party from './assets/images/party.jpg'
+import { Temp1 } from "./assets/templates/Temp1";
+import { ArrowRight } from "./utils/icons/ArrowRight";
+
+function LandingPage() {
+  return (
+    <div className="w-full h-screen bg-bgFlowers bg-cover flex justify-center text-slate-700">
+      <div className="md:w-8/12  flex flex-col justify-between">
+        <div className="flex justify-center mt-2 md:mt-20 font-bold relative">
+          <span className="font-Font-1 text-3xl text-slate-700 text-center">
+            S&G
+          </span>
+          <span className="absolute right-2 top-0 m-auto font-Font-3 md:text-2xl">
+            Per. (2)
+          </span>
+        </div>
+        <div className="flex flex-col w-full h-full md:h-fit justify-evenly md:justify-between items-center ">
+          <span className="font-Font-1 md:text-9xl text-8xl md:mb-20">
+            {" "}
+            SOLE & GASTÓN{" "}
+          </span>
+          <span className="font-Font-2 text-4xl ">¡Nos casamos!</span>
+          <div className="self-center flex gap-4 ">
+            <div>
+              <div className="font-Font-3 flex flex-col md:mt-32">
+                <ArrowRight />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="font-Font-1 text-4xl font-bold self-center mb-20">
+          3 de Agosto 2024
+        </div>
+        <div></div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="w-full h-full bg-slate-50 ">
-      <Home/>
-
-      {/* ceremonia y fiesta googlemap --when & where--  */}
-      <div id="Party" className="h-full w-full flex flex-col justify-center align-middle items-center mt-20">
-        <div className="flex flex-col justify-evenly h-full w-full">
-
-        <span className="text-2xl text-center md:text-7xl mb-10  ">Step by Step</span>
-        <div className="flex justify-evenly gap-4 w-full mt-20 md:justify-center md:gap-60">
-          <EventDetails
-            title="Ceremonia"
-            day="5 de Agosto de 2024"
-            hour="16.15hs"
-            image={church}
-            googleLink="https://maps.app.goo.gl/34gXmGheBxN6B8Nn8"
-            />
-          <EventDetails
-            title="Fiesta"
-            day="5 de Agosto de 2024"
-            hour="17.30hs"
-            image={party}
-            googleLink="https://maps.app.goo.gl/34gXmGheBxN6B8Nn8"
-            />
-            </div>
-            <div></div>
-        </div>
-      </div>
-      {/* Confirmar asistencia */}
-     <RegistryForm/>
-      {/* gift */}
-   <Present
-   cbu='0150885501000009536084'
-   alias="SOLEYGASTON"
-   titular='Gaston Mauvecin'
-   cuil="20-31497875-0"
-   aditionalNote="Para depositos en efectivo habra un buzón en el salón"    
-   />
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/main" element={<Temp1 />} />
+    </Routes>
   );
 }
 

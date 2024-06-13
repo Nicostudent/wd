@@ -13,7 +13,7 @@ export const Burger = () => {
             <path
               fill="none"
               stroke="black"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               d="M3 6.001h18m-18 6h18m-18 6h18"
             />

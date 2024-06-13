@@ -3,37 +3,36 @@ import { UseWindowSize } from "../utils/custom hooks/UseWindowSize";
 import { WebNavBar } from "./WebNavBar";
 import { MobileNavBar } from "./MobileNavBar";
 import flowers from "../assets/vectorsPNG/flowers.png";
-import { useState } from "react";
 
 export const Home = () => {
   const isMobile = UseWindowSize();
-  const [sepia, setSepia] = useState(false);
+  // const [sepia, setSepia] = useState(false);
 
-  const fontFamilies = ['Arial', 'Gwendolyn', 'Dosis', 'British-bounce', 'Times New Roman', "Merriweather", "Alice", "Garamond", "Kalam", "Dancing", "Smooch"];
+  // const fontFamilies = ['Arial', 'Gwendolyn', 'Dosis', 'British-bounce', 'Times New Roman', "Merriweather", "Alice", "Garamond", "Kalam", "Dancing", "Smooch"];
 
-  const [titleFontIndex, setTitleFontIndex] = useState(0);
-  const [dayFontIndex, setDayFontIndex] = useState(0);
-  const [hourFontIndex, setHourFontIndex] = useState(0);
+  // const [titleFontIndex, setTitleFontIndex] = useState(0);
+  // const [dayFontIndex, setDayFontIndex] = useState(0);
+  // const [hourFontIndex, setHourFontIndex] = useState(0);
 
-  // Function to handle font change for each text element
-  const handleTitleFontChange = () => {
-    setTitleFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
-  };
+  // // Function to handle font change for each text element
+  // const handleTitleFontChange = () => {
+  //   setTitleFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
+  // };
 
-  const handleDayFontChange = () => {
-    setDayFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
-  };
+  // const handleDayFontChange = () => {
+  //   setDayFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
+  // };
 
-  const handleHourFontChange = () => {
-    setHourFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
-  };
+  // const handleHourFontChange = () => {
+  //   setHourFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
+  // };
   return (
-    <div className="h-screen">
+    <div className="h-screen" id="home">
       {isMobile ? (
-        <div id="home" className="absolute max-h-screen">
+        <div className="absolute max-h-screen">
           <div className="flex justify-between gap-10 p-1 ">
             <MobileNavBar />
-            <span className="self-center text-center justify-center font-Dosis font-bold ">
+            <span className="self-center text-center justify-center font-Font-1 font-bold ">
               S&G
             </span>
             <span></span>
@@ -44,22 +43,18 @@ export const Home = () => {
             alt="flowers"
           />
           <div className="flex justify-center  absolute top-20 left-10 right-0 bottom-0 m-auto z-10 ">
-            <div  className="flex flex-col h-fit text-center gap-5 cursor-pointer">
-              <span className="font-mono">05.08.2024</span>
-              <span className="text-3xl">Save The Date</span>
+            <div  className="flex flex-col h-fit text-center gap-5 ">
+              <span className="font-mono">03.08.2024</span>
+              <span className="text-3xl font-Font-1">Save The Date</span>
             </div>
           </div>
           <div className="flex justify-center ">
-            <span className="text-xl font-light font-mono flex justify-center mx-6 mt-10">
+            <span className="text-xl font-light font-Font-2 flex justify-center mx-6 mt-10 tracking-widest ">
               NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
             </span>
           </div>
           <div className="flex justify-center mt-10">
-            <img
-              onClick={() => setSepia(!sepia)}
-              className={`w-11/12 rounded-3xl ${
-                sepia ? "sepia-[.75] " : ""
-              } pb-2 z-50`}
+            <img             
               src={GastoniPuerto}
               alt=""
             />
@@ -74,19 +69,18 @@ export const Home = () => {
                 src={flowers}
                 alt=""
               />
-              <div className="flex flex-col text-start pl-10 cursor-pointer"  >
-                <span style={{ fontFamily: fontFamilies[titleFontIndex] }}    onClick={handleTitleFontChange}  className="font-mono text-3xl my-10 pl-2 md:text-center">
+              <div className="flex flex-col text-start pl-10"  >
+                <span   className="font-mono text-3xl my-10 pl-2 md:text-center">
                   05.08.2024
                 </span>
-                <span style={{ fontFamily: fontFamilies[dayFontIndex] }}    onClick={handleDayFontChange}  className="text-9xl">Save The Date</span>
-                <span style={{ fontFamily: fontFamilies[hourFontIndex] }}    onClick={handleHourFontChange}  className="text-4xl font-light font-mono mt-10 w-2/3">
+                <span   className="text-9xl font-Font-1">Save The Date</span>
+                <span  className="text-4xl mt-10 w-2/3 font-Font-2 tracking-widest">
                   NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
                 </span>
               </div>
             </div>
             <img
-              className={`w-5/12 rounded-md ${sepia ? "sepia-[.75] " : ""} pb-2 z-50`}
-              onClick={() => setSepia(!sepia)}
+              className={`w-5/12 rounded-md pb-2 z-50`}
               src={GastoniPuerto}
               alt="asd"
             />

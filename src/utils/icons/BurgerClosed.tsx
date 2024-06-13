@@ -11,7 +11,7 @@ export const BurgerClosed = () => {
         <path
           fill="none"
           stroke="black"
-          stroke-linecap="round"
+          strokeLinecap="round"
           stroke-linejoin="round"
           d="M18 3.001v18m-6-18v18m-6-18v18"
         />

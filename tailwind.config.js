@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bgSepiaSplash1': "url('/src/assets/images/bgSepiaSplash1.png')",      
+        'bgSepiaSplash1': "url('/src/assets/images/bgSepiaSplash2.png')",  
+        'bgFlowers': "url('/src/assets/images/bgFlowers.png')",  
+        'bgSqr': "url('/src/assets/images/bg-squiggle.png')",  
       },
       fontFamily:{
         "Gwendolyn" : ["Gwendolyn", "cursive"],
@@ -18,7 +20,10 @@ export default {
         "Garamond":["EB Garamond", "serif"],
         "Kalam": ["Kalam", "cursive"],
         "Dancing": ["Dancing Script", "cursive"],
-        "Smooch": ["Smooch", "cursive"]
+        "Smooch": ["Smooch", "cursive"],
+        "Font-1": ["Cormorant Garamond", "serif"],
+        "Font-2": ["Montserrat", "sans-serif"],
+        "Font-3": ["Courier Prime", "monospace"]
       },
       sepia: {
         25: '.25',
