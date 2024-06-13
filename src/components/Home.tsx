@@ -80,7 +80,7 @@ export const Home = () => {
               </div>
             </div>
             <img
-              className={`w-5/12 rounded-md pb-2 z-50`}
+              className="w-5/12 rounded-2xl pb-2"
               src={GastoniPuerto}
               alt="asd"
             />
