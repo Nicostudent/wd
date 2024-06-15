@@ -24,7 +24,7 @@ export const Temp1 = () => {
               day="5 de Agosto de 2024"
               hour="16.15hs"
               children={<Church />}
-              googleLink="https://maps.app.goo.gl/34gXmGheBxN6B8Nn8"
+              googleLink="https://maps.app.goo.gl/rPhKxkMizkhGmBr19"
             />
             <EventDetails
               title="Fiesta"
