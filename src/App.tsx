@@ -16,7 +16,7 @@ function LandingPage() {
           </span>
         </div>
         <div className="flex flex-col w-full h-full md:h-fit justify-evenly md:justify-between items-center ">
-          <span className="font-seasons  md:text-9xl text-8xl md:mb-20">
+          <span className="font-seasons  md:text-9xl text-6xl text-center md:mb-20">
             {" "}
             SOLE & GASTÓN{" "}
           </span>

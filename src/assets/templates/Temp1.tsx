@@ -21,15 +21,15 @@ export const Temp1 = () => {
           <div className="flex justify-evenly gap-4 w-full mt-20 md:justify-center md:gap-60">
             <EventDetails
               title="Ceremonia"
-              day="5 de Agosto de 2024"
+              day="3 de Agosto de 2024"
               hour="16.15hs"
               children={<Church />}
               googleLink="https://maps.app.goo.gl/rPhKxkMizkhGmBr19"
             />
             <EventDetails
               title="Fiesta"
-              day="5 de Agosto de 2024"
-              hour="17.30hs"
+              day="3 de Agosto de 2024"
+              hour="18hs"
               children={<BrideAndGroom />}
               googleLink="https://maps.app.goo.gl/34gXmGheBxN6B8Nn8"
             />

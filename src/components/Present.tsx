@@ -24,18 +24,17 @@ export const Present = ({
       className=" w-full flex flex-col justify-center items-center relative"
       id="Presents"
     >
-      <div className=" text-3xl font-times text-center tracking-widest  my-10 w-4/5 md:w-1/3 ">
-      <img
+      <div className=" text-3xl font-times text-center my-10 w-4/5 md:w-2/5 ">
+        <img
           className="top-0   bottom-0 right-96 -rotate-12  md:absolute   pl-14 overflow-hidden w-30"
           src={flowers}
           alt="flowers"
         />
         <span>
-          Nada nos hace más felices que compartas con nosotros este gran
-          momento. Si querés regalarnos algo, podes hacerlo en esta cuenta o en
-          el salón habrá un buzón
+          NADA NOS HACE MÁS FELICES QUE COMPARTAS CON NOSOTROS ESTE GRAN
+          MOMENTO. SI QUERÉS REGALARNOS ALGO, PODES HACERLO EN ESTA CUENTA O EN
+          EL SALÓN, <b>EN DONDE HABRÁ UN BUZÓN.</b>
         </span>
-      
       </div>
       <div className="w-2/6 md:w-1/6 mb-10 ">{children}</div>
 
