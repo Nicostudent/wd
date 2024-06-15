@@ -1,10 +1,10 @@
-import { Home } from "../../components/Home";
-import { EventDetails } from "../../components/EventDetails";
-import { Church } from "../../utils/icons/Church";
-import { BrideAndGroom } from "../../utils/icons/BrideAndGroom";
-import { RegistryForm } from "../../components/RegistryForm";
-import { Present } from "../../components/Present";
-import { Gifts } from "../../utils/icons/Gifts";
+import { Home } from "../components/Home";
+import { EventDetails } from "../components/EventDetails";
+import { Church } from "../utils/icons/Church";
+import { BrideAndGroom } from "../utils/icons/BrideAndGroom";
+import { RegistryForm } from "../components/RegistryForm";
+import { Present } from "../components/Present";
+import { Gifts } from "../utils/icons/Gifts";
 
 export const Temp1 = () => {
   return (

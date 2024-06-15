@@ -1,9 +1,10 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import "./App.css";
-import { Temp1 } from "./assets/templates/Temp1";
+import { Temp1 } from "./templates/Temp1";
 import { ArrowRight } from "./utils/icons/ArrowRight";
 
 function LandingPage() {
+  const { num } = useParams(); // Extracts the 'num' parameter from the URL
   return (
     <div className="w-full h-screen bg-marmolado bg-cover bg-center flex justify-center text-slate-700">
       <div className="md:w-8/12  flex flex-col justify-between">
@@ -12,7 +13,7 @@ function LandingPage() {
             S & G 
           </span>
           <span className="absolute right-2 top-0 m-auto font-forum md:text-2xl">
-            Per. (2)
+            Per. ({num})
           </span>
         </div>
         <div className="flex flex-col w-full h-full md:h-fit justify-evenly md:justify-between items-center ">
@@ -42,6 +43,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/:num" element={<LandingPage />} /> {/* Route with parameter */}
       <Route path="/main" element={<Temp1 />} />
     </Routes>
   );
