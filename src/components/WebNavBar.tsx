@@ -23,7 +23,7 @@ export const WebNavBar = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-12 justify-center font-Font-3 text-2xl  ">
+    <div className="font-Dosis flex items-center gap-12 justify-center  text-2xl  ">
       <ScrollLink className=' cursor-pointer hover:bg-amber-300 w-fit px-4 hover:bg-opacity-30 hover:text-white  rounded' to="home" smooth={true} duration={500}>Home</ScrollLink>
       {/* <ScrollLink className=' cursor-pointer hover:bg-amber-300 w-fit px-4 hover:bg-opacity-30 hover:text-white  rounded' to="Story" smooth={true} duration={500}>Our Story</ScrollLink> */}
       <ScrollLink className=' cursor-pointer hover:bg-amber-300 w-fit px-4 hover:bg-opacity-30 hover:text-white  rounded' to="Party" smooth={true} duration={500}>Wedding Party</ScrollLink>

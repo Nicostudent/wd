@@ -7,9 +7,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bgSepiaSplash1': "url('/src/assets/images/bgSepiaSplash2.png')",  
+        'bgSepiaSplash1': "url('/src/assets/images/splash2.png')",  
         'bgFlowers': "url('/src/assets/images/bgFlowers.png')",  
         'bgSqr': "url('/src/assets/images/bg-squiggle.png')",  
+        'marmolado': "url('/src/assets/images/marmolado.jpeg')",  
+
       },
       fontFamily:{
         "Gwendolyn" : ["Gwendolyn", "cursive"],
@@ -23,7 +25,13 @@ export default {
         "Smooch": ["Smooch", "cursive"],
         "Font-1": ["Cormorant Garamond", "serif"],
         "Font-2": ["Montserrat", "sans-serif"],
-        "Font-3": ["Courier Prime", "monospace"]
+        "Font-3": ["Courier Prime", "monospace"],
+        "Font-0": ["PT Serif", "serif"],
+        "times": ["times", "curisive"],
+        "seasons": ["seasons", "curisive"],
+        "forum": [ "Forum", "serif"]
+
+   
       },
       sepia: {
         25: '.25',

@@ -34,12 +34,12 @@ export const EventDetails = ({
       )}
       <span
         // onClick={handleFontChange}
-        className="text-lg tracking-widest md:text-4xl cursor-pointer  font-Font-2"
         // style={{ fontFamily: fontFamilies[fontIndex] }}
+        className="text-lg tracking-widest md:text-4xl cursor-pointer  font-times"
       >
         {title}
       </span>
-      <div className="flex flex-col text-center gap-2 font-Font-3">
+      <div className="flex flex-col text-center gap-2 font-dosis">
         <span className="text-sm text-center text-slate-600 md:text-2xl cursor-pointer">
           {day}
         </span>
