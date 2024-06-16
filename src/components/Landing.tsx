@@ -24,7 +24,7 @@ function useQuery() {
             <span className="font-seasons text-3xl text-slate-700 text-center">
               S & G 
             </span>
-            <span className="absolute right-2 top-0 m-auto font-forum md:text-2xl">
+            <span className="absolute left-2 top-0 m-auto font-forum text-3xl md:text-4xl">
               Per. ({num})
             </span>
           </div>
