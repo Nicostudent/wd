@@ -3,7 +3,7 @@ import { EventDetails } from "../components/EventDetails";
 import { BrideAndGroom } from "../utils/icons/BrideAndGroom";
 import { RegistryForm } from "../components/RegistryForm";
 import { Present } from "../components/Present";
-import { Gifts } from "../utils/icons/Gifts";
+import vectorGifts from '../assets/images/vectorGifts.png'
 
 export const Temp1PartyGuest = () => {
   return (
@@ -40,7 +40,7 @@ export const Temp1PartyGuest = () => {
         alias="GASTONYSOLE"
         titular="Gaston Mauvecin"
         cuil="20-32459499-0"
-        children={<Gifts />}
+        children={<img src={vectorGifts} alt="Gifts" />}
         aditionalNote="Mercado Pago"
       />
     </div>

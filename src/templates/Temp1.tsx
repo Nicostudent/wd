@@ -4,7 +4,7 @@ import { Church } from "../utils/icons/Church";
 import { BrideAndGroom } from "../utils/icons/BrideAndGroom";
 import { RegistryForm } from "../components/RegistryForm";
 import { Present } from "../components/Present";
-import { Gifts } from "../utils/icons/Gifts";
+import vectorGifts from '../assets/images/vectorGifts.png'
 
 export const Temp1 = () => {
   return (
@@ -48,7 +48,7 @@ export const Temp1 = () => {
         alias="GASTONYSOLE"
         titular="Gaston Mauvecin"
         cuil="20-32459499-0"
-        children={<Gifts />}
+        children={<img src={vectorGifts} alt=""/>}
         aditionalNote="Mercado Pago"
       />
     </div>
