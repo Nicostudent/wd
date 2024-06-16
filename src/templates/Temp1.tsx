@@ -41,7 +41,7 @@ export const Temp1 = () => {
         </div>
       </div>
       {/* Confirmar asistencia */}
-      <RegistryForm />
+      <RegistryForm party={false}/>
       {/* gift */}
       <Present
         cbu="0000003100021611871757"
