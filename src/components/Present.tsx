@@ -33,7 +33,7 @@ export const Present = ({
         <span>
           NADA NOS HACE MÁS FELICES QUE COMPARTAS CON NOSOTROS ESTE GRAN
           MOMENTO. SI QUERÉS REGALARNOS ALGO, PODES HACERLO EN ESTA CUENTA O EN
-          EL SALÓN, <b>EN DONDE HABRÁ UN BUZÓN.</b>
+          EL SALÓN, EN DONDE HABRÁ UN BUZÓN.
         </span>
       </div>
       <div className="w-2/6 md:w-1/6 mb-10 ">{children}</div>
@@ -61,8 +61,8 @@ export const Present = ({
         src={GastoniArcoDelTriunfo}
         alt=""
       />
-      <div>
-        <img src={thanks} alt="" />
+      <div className="flex justify-center items-center">
+        <img className="w-3/5" src={thanks} alt="" />
       </div>
     </div>
   );

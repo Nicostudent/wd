@@ -44,12 +44,12 @@ export const Home = () => {
           />
           <div className="flex justify-center  absolute top-20 left-10 right-0 bottom-0 m-auto z-10 ">
             <div  className="flex flex-col h-fit text-center gap-5 ">
-              <span className="font-mono">03.08.2024</span>
-              <span className="text-3xl font-Font-0">Save The Date</span>
+              <span className="font-times text-2xl md:text-base">03.08.2024</span>
+              <span className="md:text-3xl text-4xl font-Font-0">Save The Date</span>
             </div>
           </div>
-          <div className="flex justify-center ">
-            <span className="text-xl font-light font-times flex justify-center mx-6 mt-10 ">
+          <div className="flex justify-center items-center text-center ">
+            <span className="text-xl font-light font-times mx-6 mt-10 ">
               NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
             </span>
           </div>

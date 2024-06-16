@@ -11,7 +11,7 @@ export const BrideAndGroom = () => {
         width="1200px"
         height="1200px"
         viewBox="0 0 1200 1200"
-        enable-background="new 0 0 1200 1200"
+        enableBackground="new 0 0 1200 1200"
       >
         <g>
           <path
