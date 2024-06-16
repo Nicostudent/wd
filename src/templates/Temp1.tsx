@@ -14,7 +14,7 @@ export const Temp1 = () => {
         id="Party"
         className="h-full w-full flex flex-col justify-center align-middle items-center mt-20"
       >
-        <div className="flex flex-col justify-evenly h-full w-full">
+        <div className="flex flex-col justify-evenly h-full w-full mt-16">
           <span className="text-2xl text-center md:text-7xl mb-10 font-Font-0 ">
             Step by Step
           </span>

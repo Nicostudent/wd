@@ -43,18 +43,23 @@ export const Home = () => {
             alt="flowers"
           />
           <div className="flex justify-center  absolute top-20 left-10 right-0 bottom-0 m-auto z-10 ">
-            <div  className="flex flex-col h-fit text-center gap-5 ">
-              <span className="font-times text-2xl md:text-base">03.08.2024</span>
-              <span className="md:text-3xl text-4xl font-Font-0">Save The Date</span>
+            <div className="flex flex-col h-fit text-center gap-5 ">
+              <span className="font-times text-2xl md:text-base">
+                03.08.2024
+              </span>
+              <span className="md:text-3xl text-4xl font-Font-0">
+                Save The Date
+              </span>
             </div>
           </div>
           <div className="flex justify-center items-center text-center ">
-            <span className="text-xl font-light font-times mx-6 mt-10 ">
+            <span className="text-xl font-light font-times mx-6 my-10 ">
               NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
             </span>
           </div>
-          <div className="flex justify-center mt-10">
-            <img             
+          <div className="flex justify-center ">
+            <img
+              className="rounded-2xl pb-2 w-full max-w-lg"
               src={GastoniPuerto}
               alt=""
             />
@@ -69,12 +74,12 @@ export const Home = () => {
                 src={flowers}
                 alt=""
               />
-              <div className="flex flex-col text-start pl-10"  >
-                <span   className="font-times text-3xl my-10 pl-2 md:text-center">
+              <div className="flex flex-col text-start pl-10">
+                <span className="font-times text-3xl my-10 pl-2 md:text-center">
                   03.08.2024
                 </span>
-                <span   className="text-9xl font-Font-0">Save The Date</span>
-                <span  className="text-4xl mt-10 w-2/3 font-times">
+                <span className="text-9xl font-Font-0">Save The Date</span>
+                <span className="text-4xl mt-10 w-2/3 font-times">
                   NOS CASAMOS Y QUEREMOS QUE SEAS PARTE DE ESTE DÍA.
                 </span>
               </div>

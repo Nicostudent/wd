@@ -16,7 +16,6 @@ function useQuery() {
         </div>
       );
     }
-    console.log(num);
     return (
       <div className="w-full h-screen bg-marmolado bg-cover bg-center flex justify-center text-slate-700">
         <div className="md:w-8/12 flex flex-col justify-between">
@@ -25,7 +24,7 @@ function useQuery() {
               S & G 
             </span>
             <span className="absolute right-2 top-0 m-auto font-forum md:text-2xl">
-              Per. ({num})
+              Pers. ({num})
             </span>
           </div>
           <div className="flex flex-col w-full h-full md:h-fit justify-evenly md:justify-between items-center ">
@@ -37,7 +36,7 @@ function useQuery() {
             <div className="self-center flex gap-4 ">
               <div>
                 <div className="font-forum flex flex-col md:mt-32">
-                  <ArrowRight to="/party" />
+                  <ArrowRight to={`/party?guest=${num}`} />
                 </div>
               </div>
             </div>
