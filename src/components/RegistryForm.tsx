@@ -1,75 +1,55 @@
-// import React, { useRef } from 'react';
-// import emailjs from 'emailjs-com';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useEffect } from "react";
 
 export const RegistryForm = () => {
-  // const form = useRef();
+  useEffect(() => {
+    const widgetScriptSrc = "https://tally.so/widgets/embed.js";
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+    const load = () => {
+      // Load Tally embeds
+      if (typeof (window as any).Tally !== "undefined") {
+        (window as any).Tally.loadEmbeds();
+        return;
+      }
 
-  //   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-  //     .then((result) => {
-  //       console.log(result.text);
-  //       alert('Message sent successfully!');
-  //     }, (error) => {
-  //       console.log(error.text);
-  //       alert('Failed to send message, please try again later.');
-  //     });
+      // Fallback if window.Tally is not available
+      document
+        .querySelectorAll("iframe[data-tally-src]:not([src])")
+        .forEach((iframeEl) => {
+          (iframeEl as HTMLIFrameElement).src =
+            iframeEl.getAttribute("data-tally-src") || "";
+        });
+    };
 
-  //   e.target.reset(); // Reset the form after submission
-  // };
+    // If Tally is already loaded, load the embeds
+    if (typeof (window as any).Tally !== "undefined") {
+      load();
+      return;
+    }
+
+    // If the Tally widget script is not loaded yet, load it
+    if (document.querySelector(`script[src="${widgetScriptSrc}"]`) === null) {
+      const script = document.createElement("script");
+      script.src = widgetScriptSrc;
+      script.onload = load;
+      script.onerror = load;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
-    <div className="h-screen flex justify-center items-center mb-20 " id="Registry">
-      <form  className="flex w-11/12 md:w-1/3 flex-col bg-transparent bg-opacity-80 p-8 rounded-lg shadow-xl shadow-slate-400 ">
-        <span className="text-3xl font-Gwendolyn mb-6 font-semibold text-center">Confirma tu asistencia</span>
-        <label className="mb-2 font-semibold">
-          Nombre y Apellido:
-          <input
-            type="text"
-            name="name"
-            placeholder="Nombre y apellido"
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </label>
-        <div className="mb-6">
-          <span className="font-semibold">Vas a asistir?</span>
-          <label className="flex items-center mt-2">
-            <input type="radio" name="attending" value="Yes" className="mr-2" required />
-            Sí, voy a asistir.
-          </label>
-          <label className="flex items-center mt-2">
-            <input type="radio" name="attending" value="No" className="mr-2" required />
-            Lo siento, no voy a poder asistir.
-          </label>
-        </div>
-        <label className="mb-2 font-semibold">
-          Cantidad de asistentes:
-          <input
-            type="number"
-            name="attendees"
-            placeholder="Cantidad de asistentes"
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </label>
-        <label className="mb-4 font-semibold">
-          Dejale un mensaje a la pareja:
-          <textarea
-            name="message"
-            placeholder="Deja un mensaje"
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full h-32"
-            required
-          ></textarea>
-        </label>
-        <button
-          type="submit"
-          className="p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 w-full"
-        >
-          Enviar
-        </button>
-      </form>
+    <div
+      className="h-screen flex justify-center items-center mb-20 "
+      id="Registry"
+    >
+      <iframe
+        className="flex w-11/12 md:w-1/3 flex-col"
+        data-tally-src="https://tally.so/embed/3xQ405?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="495"
+        title="Confirmar Asistencia"
+      ></iframe>
     </div>
   );
 };
