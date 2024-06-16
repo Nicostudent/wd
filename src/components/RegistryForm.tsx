@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 
-export const RegistryForm = ({party}:{party:boolean}) => {
+export const RegistryForm = ({ party }: { party: boolean }) => {
   useEffect(() => {
     const widgetScriptSrc = "https://tally.so/widgets/embed.js";
 
@@ -46,9 +46,8 @@ export const RegistryForm = ({party}:{party:boolean}) => {
         className="flex w-11/12 md:w-1/3 flex-col"
         data-tally-src={
           party
-            ?"https://tally.so/embed/mOPVNA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            : "https://tally.so/embed/3xQ405?alignLeft=1&transparentBackground=1&dynamicHeight=1&title=Confirmar%20Asistencia"
-            
+            ? "https://tally.so/embed/mOPVNA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            : "https://tally.so/embed/3xQ405?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
         }
         loading="lazy"
         width="100%"

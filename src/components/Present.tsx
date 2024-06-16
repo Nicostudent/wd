@@ -39,7 +39,7 @@ export const Present = ({
       <div className="w-2/6 md:w-1/6 mb-10 ">{children}</div>
 
       <div
-        className="bg-amber-100 md:w-fit md:px-20 md:gap-2 bg-opacity-50 border-2 border-black flex flex-col
+        className="bg-amber-50 md:w-fit md:px-20 md:gap-2 bg-opacity-50 border-2 border-black/50 flex flex-col
        w-10/12 justify-center pl-2 rounded-md h-52 mb-5"
       >
         <span>
@@ -61,7 +61,7 @@ export const Present = ({
         src={GastoniArcoDelTriunfo}
         alt=""
       />
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center p-10">
         <img className="w-3/5" src={thanks} alt="" />
       </div>
     </div>

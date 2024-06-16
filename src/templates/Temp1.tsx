@@ -4,9 +4,13 @@ import { Church } from "../utils/icons/Church";
 import { BrideAndGroom } from "../utils/icons/BrideAndGroom";
 import { RegistryForm } from "../components/RegistryForm";
 import { Present } from "../components/Present";
-import vectorGifts from '../assets/images/vectorGifts.png'
+import vectorGifts from "../assets/images/vectorGifts.png";
+import { useQuery } from "../components/Landing";
 
 export const Temp1 = () => {
+  const query = useQuery();
+  const d12 = query.get("p") || 0;
+
   return (
     <div className="bg-marmolado bg-cover bg-center bg-fixed min-h-screen">
       <Home />
@@ -19,13 +23,15 @@ export const Temp1 = () => {
             Step by Step
           </span>
           <div className="flex justify-evenly gap-4 w-full mt-20 md:justify-center md:gap-60">
-            <EventDetails
-              title="Ceremonia"
-              day="3 de Agosto de 2024"
-              hour="16.15hs"
-              children={<Church />}
-              googleLink="https://maps.app.goo.gl/rPhKxkMizkhGmBr19"
-            />
+            {!d12 && (
+              <EventDetails
+                title="Ceremonia"
+                day="3 de Agosto de 2024"
+                hour="16.15hs"
+                children={<Church />}
+                googleLink="https://maps.app.goo.gl/rPhKxkMizkhGmBr19"
+              />
+            )}
             <EventDetails
               title="Fiesta"
               day="3 de Agosto de 2024"
@@ -41,14 +47,14 @@ export const Temp1 = () => {
         </div>
       </div>
       {/* Confirmar asistencia */}
-      <RegistryForm party={false}/>
+      <RegistryForm party={!!d12} />
       {/* gift */}
       <Present
         cbu="0000003100021611871757"
         alias="GASTONYSOLE"
         titular="Gaston Mauvecin"
         cuil="20-32459499-0"
-        children={<img src={vectorGifts} alt=""/>}
+        children={<img src={vectorGifts} alt="" />}
         aditionalNote="Mercado Pago"
       />
     </div>
