@@ -16,10 +16,10 @@ export function Landing() {
     <div className="w-full h-screen bg-marmolado bg-cover bg-center flex justify-center text-slate-700">
       <div className="md:w-8/12 flex flex-col justify-between">
         <div className="flex justify-center mt-2 md:mt-20 font-bold relative">
-          <span className="font-seasons text-3xl text-slate-700 text-center">
+          {/* <span className="font-seasons text-3xl text-slate-700 text-center pt-10">
             S & G
-          </span>
-          <span className="absolute left-2 top-20 m-auto font-forum text-3xl md:text-4xl">
+          </span> */}
+          <span className="absolute left-2 pt-20 md:pt-10 m-auto font-forum text-3xl md:text-4xl">
             Pers. ({num})
           </span>
         </div>
