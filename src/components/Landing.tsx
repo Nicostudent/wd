@@ -19,7 +19,7 @@ export function Landing() {
           <span className="font-seasons text-3xl text-slate-700 text-center">
             S & G
           </span>
-          <span className="absolute left-2 top-0 m-auto font-forum text-3xl md:text-4xl">
+          <span className="absolute left-2 top-20 m-auto font-forum text-3xl md:text-4xl">
             Pers. ({num})
           </span>
         </div>

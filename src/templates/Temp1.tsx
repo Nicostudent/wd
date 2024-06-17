@@ -23,22 +23,34 @@ export const Temp1 = () => {
             Step by Step
           </span>
           <div className="flex justify-evenly gap-4 w-full mt-20 md:justify-center md:gap-60">
-            {!d12 && (
+            {!d12 ? (
+              <div className="flex justify-evenly gap-4 w-full mt-20 md:justify-center md:gap-60">
+
               <EventDetails
                 title="Ceremonia"
                 day="3 de Agosto de 2024"
                 hour="16.15hs"
                 children={<Church />}
                 googleLink="https://maps.app.goo.gl/rPhKxkMizkhGmBr19"
-              />
-            )}
-            <EventDetails
+                />
+              <EventDetails
               title="Fiesta"
               day="3 de Agosto de 2024"
               hour="18hs"
               children={<BrideAndGroom />}
               googleLink="https://maps.app.goo.gl/34gXmGheBxN6B8Nn8"
-            />
+              />
+              </div>
+            ):(
+
+              <EventDetails
+              title="Fiesta"
+              day="3 de Agosto de 2024"
+              hour="21:30hs"
+              children={<BrideAndGroom />}
+              googleLink="https://maps.app.goo.gl/34gXmGheBxN6B8Nn8"
+              />
+            )}
           </div>
           <div className="font-Font-3 flex justify-center items-center flex-col text-xl">
             <span>Dress Code:</span>
