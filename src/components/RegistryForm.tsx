@@ -39,11 +39,12 @@ export const RegistryForm = ({ party }: { party: boolean }) => {
 
   return (
     <div
-      className="h-screen flex justify-center items-center mb-20 "
+      className="py-24 flex justify-center items-center mb-20 flex-col text-3xl md:text-5xl "
       id="Registry"
     >
+      <span className="font-Font-0 p-10">Confirma tu asistencia</span>
       <iframe
-        className="flex w-11/12 md:w-1/3 flex-col"
+        className="flex w-11/12 md:w-2/3 lg:w-1/3 flex-col"
         data-tally-src={
           party
             ? "https://tally.so/embed/mOPVNA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"

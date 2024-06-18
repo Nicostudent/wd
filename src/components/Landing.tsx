@@ -15,11 +15,8 @@ export function Landing() {
   return (
     <div className="w-full h-screen bg-marmolado bg-cover bg-center flex justify-center text-slate-700">
       <div className="md:w-8/12 flex flex-col justify-between">
-        <div className="flex justify-center mt-2 md:mt-20 font-bold relative">
-          <span className="font-seasons text-3xl text-slate-700 text-center">
-            S & G
-          </span>
-          <span className="absolute left-2 top-0 m-auto font-forum text-3xl md:text-4xl">
+        <div className="flex justify-center font-bold relative  mt-14 md:mt-10 ">
+          <span className="absolute left-4 m-auto font-forum text-3xl md:text-4xl">
             Pers. ({num})
           </span>
         </div>
