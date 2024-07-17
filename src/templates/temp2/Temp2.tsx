@@ -28,9 +28,9 @@ export const Temp2 = () => {
             <MobileNavBar />
           ) : (
             <div className="flex w-10/12 justify-between ">
-              <WebNavBar hoverBg hoverTxt />
+              <WebNavBar />
               <div className="text-cyan-800 border-cyan-800 ">
-                <ScrollLinkButton to="Registry" color />
+                <ScrollLinkButton to="Registry" />
               </div>
             </div>
           )}
