@@ -1,11 +1,11 @@
-import { Home } from "../components/Home";
-import { EventDetails } from "../components/EventDetails";
-import { Church } from "../utils/icons/Church";
-import { BrideAndGroom } from "../utils/icons/BrideAndGroom";
-import { RegistryForm } from "../components/RegistryForm";
-import { Present } from "../components/Present";
-import vectorGifts from "../assets/images/vectorGifts.png";
-import { useQuery } from "../components/Landing";
+import { Home } from "../../components/Home";
+import { EventDetails } from "../../components/EventDetails";
+import { Church } from "../../utils/icons/Church";
+import { BrideAndGroom } from "../../utils/icons/BrideAndGroom";
+import { RegistryForm } from "../../components/RegistryForm";
+import vectorGifts from "../../assets/vectorsPNG/vectorGifts.png"
+import { useQuery } from "../../utils/custom hooks/UseQuery";
+import { Present } from "../../components/Present";
 
 export const Temp1 = () => {
   const query = useQuery();

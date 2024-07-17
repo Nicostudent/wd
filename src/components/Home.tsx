@@ -5,27 +5,7 @@ import { MobileNavBar } from "./MobileNavBar";
 import flowers from "../assets/vectorsPNG/flowers.png";
 
 export const Home = () => {
-  const isMobile = UseWindowSize();
-  // const [sepia, setSepia] = useState(false);
-
-  // const fontFamilies = ['Arial', 'Gwendolyn', 'Dosis', 'British-bounce', 'Times New Roman', "Merriweather", "Alice", "Garamond", "Kalam", "Dancing", "Smooch"];
-
-  // const [titleFontIndex, setTitleFontIndex] = useState(0);
-  // const [dayFontIndex, setDayFontIndex] = useState(0);
-  // const [hourFontIndex, setHourFontIndex] = useState(0);
-
-  // // Function to handle font change for each text element
-  // const handleTitleFontChange = () => {
-  //   setTitleFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
-  // };
-
-  // const handleDayFontChange = () => {
-  //   setDayFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
-  // };
-
-  // const handleHourFontChange = () => {
-  //   setHourFontIndex((prevIndex) => (prevIndex + 1) % fontFamilies.length);
-  // };
+  const isMobile = UseWindowSize(); 
   return (
     <div className="h-screen" id="home">
       {isMobile ? (

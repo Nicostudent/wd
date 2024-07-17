@@ -10,7 +10,11 @@ export default {
         'bgSepiaSplash1': "url('/src/assets/images/splash2.png')",  
         'bgFlowers': "url('/src/assets/images/bgFlowers.png')",  
         'bgSqr': "url('/src/assets/images/bg-squiggle.png')",  
-        'marmolado': "url('/src/assets/images/marmolado.jpeg')",  
+        'marmolado': "url('/src/assets/images/marmolado.jpeg')",
+        'sunflower': "url('/src/assets/images/sunflower.jpg')",
+        'bici': "url('/src/assets/images/bici.jpeg')",
+        'fondoFlores': "url('/src/assets/images/fondoFlores.jpg')",
+        'leaf': "url('/src/assets/images/leaf.jpg')",
 
       },
       fontFamily:{
@@ -29,9 +33,9 @@ export default {
         "Font-0": ["PT Serif", "serif"],
         "times": ["times", "curisive"],
         "seasons": ["seasons", "curisive"],
-        "forum": [ "Forum", "serif"]
-
-   
+        "forum": [ "Forum", "serif"],
+        "zilla": ["Zilla Slab", "serif"],
+        "cormorant": ["Cormorant Garamond", "serif"],
       },
       sepia: {
         25: '.25',

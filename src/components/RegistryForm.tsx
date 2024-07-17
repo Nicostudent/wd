@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 
-export const RegistryForm = ({ party }: { party: boolean }) => {
+export const RegistryForm = ({
+  party,
+  bgColor,
+}: {
+  party: boolean;
+  bgColor?: string;
+}) => {
   useEffect(() => {
     const widgetScriptSrc = "https://tally.so/widgets/embed.js";
 
@@ -39,12 +45,21 @@ export const RegistryForm = ({ party }: { party: boolean }) => {
 
   return (
     <div
-      className="py-24 flex justify-center items-center mb-20 flex-col text-3xl md:text-5xl "
+      className={`py-24 w-full  flex justify-center items-center mb-20 flex-col  ${
+        bgColor && bgColor
+      }`}
       id="Registry"
     >
-      <span className="font-Font-0 p-10">Confirma tu asistencia</span>
+      <div className="flex flex-col gap-5 font-times text-center mt-5 w-4/5 md:w-2/5 ">
+        <span className="text-4xl ">¡Deseamos verte!</span>
+        <span className="text-2xl font-extralight font-Font-1">
+          La celebración no sería lo mismo sin ti. Haznos saber si planeas
+          asistir a través del enlace de confirmación a continuación, y anota
+          cualquier restricción dietética o petición especial.
+        </span>
+      </div>
       <iframe
-        className="flex w-11/12 md:w-2/3 lg:w-1/3 flex-col"
+        className="flex w-11/12 md:w-2/3 lg:w-1/3 flex-col mb-5"
         data-tally-src={
           party
             ? "https://tally.so/embed/mOPVNA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
