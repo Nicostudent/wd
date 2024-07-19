@@ -5,7 +5,7 @@ type CardProps = {
 
 const Card = ({ listItems, title}: CardProps) => {
   return (
-    <div className="border-2 rounded-lg p-4 bg-green-100">
+    <div className="border-4 rounded-lg p-4 ">
       <span className="flex justify-center py-2 font-cormorant text-2xl">{title}</span>
       <ul className="list-disc pl-2 font-Font-1 text-lg">
         {listItems &&
