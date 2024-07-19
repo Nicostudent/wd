@@ -1,72 +1,62 @@
-import { motion } from 'framer-motion';
 import { useState } from 'react';
-import img1 from '../assets/images/GastoniPuerto.jpg'
-import img2 from '../assets/images/coule11.jpg'
-import img3 from '../assets/images/couple3-1.jpg'
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import img1 from "../assets/images/landing/img1.jpg";
+import img2 from "../assets/images/landing/img2.jpg";
+import img3 from "../assets/images/landing/img3.jpg";
 
-
-const images = [img1, img2,img3];
+const images = [
+  { src: img1, link: '/temp3' },
+  { src: img2, link: '/temp1' },
+  { src: img3, link: '/temp2' },
+];
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   return (
-    <div className="relative w-full h-96 flex items-center justify-center">
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white bg-opacity-50 rounded-full z-10"
-      >
-        Prev
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white bg-opacity-50 rounded-full z-10"
-      >
-        Next
-      </button>
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        {images.map((image, index) => {
-          const isCurrent = index === currentIndex;
-          const isPrev = index === (currentIndex - 1 + images.length) % images.length;
-          const isNext = index === (currentIndex + 1) % images.length;
-
-          let size = "w-1/3 h-1/3";
-          let zIndex = 1;
-          let opacity = 0.5;
-          let x = (index - currentIndex) * 100;
-
-          if (isCurrent) {
-            size = "w-2/3 h-2/3";
-            zIndex = 2;
-            opacity = 1;
-            x = 0;
-          } else if (isPrev) {
-            x = -100;
-          } else if (isNext) {
-            x = 100;
-          }
-
-          return (
-            <motion.img
-              key={index}
-              src={image}
-              initial={{ opacity: 0 }}
-              animate={{ opacity, x }}
-              transition={{ duration: 0.5 }}
-              className={`absolute ${size} object-cover`}
-              style={{ zIndex }}
-            />
-          );
-        })}
+    <div className="relative w-full max-w-lg mx-auto ">
+      <div className="relative w-full h-64 md:h-96">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <Link to={images[currentIndex].link}>
+              <img
+                src={images[currentIndex].src}
+                alt={`Slide ${currentIndex}`}
+                className="w-full h-full object-contain rounded-lg"
+              />
+            </Link>
+          </motion.div>
+        </AnimatePresence>
       </div>
+      <button
+        onClick={handlePrev}
+        className="absolute top-1/2 md:-left-12 left-2 transform -translate-y-1/2  text-black p-2 text-4xl opacity-35 border-2 border-slate-900  hover:opacity-70 rounded-full z-50"
+      >
+        &lt;
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute top-1/2 md:-right-12 right-2 transform -translate-y-1/2 text-black p-2 text-4xl opacity-35 border-2 border-slate-900 hover:opacity-70 rounded-full z-10"
+      >
+        &gt;
+      </button>
     </div>
   );
 };
