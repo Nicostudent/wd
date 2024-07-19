@@ -6,9 +6,9 @@ import img2 from "../assets/images/landing/img2.jpg";
 import img3 from "../assets/images/landing/img3.jpg";
 
 const images = [
+  { src: img3, link: '/temp2' },
   { src: img1, link: '/temp3' },
   { src: img2, link: '/temp1' },
-  { src: img3, link: '/temp2' },
 ];
 
 export const Carousel = () => {
