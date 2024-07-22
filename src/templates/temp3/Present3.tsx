@@ -51,12 +51,16 @@ export const Present3 = ({
         </span>
       </motion.div>
 
-      <button
+      <motion.button
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3, delay: 0.5 }}
+        viewport={{ once: true, amount: 0.4 }}
         className="border rounded-full p-8 m-5"
         onClick={() => setModal(!modal)}
       >
         CONTRIBUYE
-      </button>
+      </motion.button>
 
       <AnimatePresence>
         {modal && (

@@ -7,9 +7,6 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bgSepiaSplash1': "url('/src/assets/images/splash2.png')",  
-        'bgFlowers': "url('/src/assets/images/bgFlowers.png')",  
-        'bgSqr': "url('/src/assets/images/bg-squiggle.png')",  
         'marmolado': "url('/src/assets/images/marmolado.jpeg')",
         'sunflower': "url('/src/assets/images/sunflower.jpg')",
         'bici': "url('/src/assets/images/bici.jpeg')",
@@ -36,6 +33,11 @@ export default {
         "forum": [ "Forum", "serif"],
         "zilla": ["Zilla Slab", "serif"],
         "cormorant": ["Cormorant Garamond", "serif"],
+      },
+      colors:{
+        orangt450:"#FCF8EB",
+        orangt4100:"#F4E6D0",
+        ambert4700:"#AC5E23",
       },
       sepia: {
         25: '.25',

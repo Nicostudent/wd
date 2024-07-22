@@ -45,7 +45,7 @@ export const RegistryForm = ({
 
   return (
     <div
-      className={`py-24 w-full  flex justify-center items-center mb-20 flex-col  ${
+      className={`py-24 w-full  flex justify-center items-center  flex-col  ${
         bgColor && bgColor
       }`}
       id="Registry"

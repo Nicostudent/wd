@@ -7,6 +7,8 @@ import { Card1 } from "./templates/temp1/Card1";
 import { Landing } from "./components/Landing";
 import { Temp3 } from "./templates/temp3/Temp3";
 import { Card3 } from "./templates/temp3/Card3";
+import { Temp4 } from "./templates/temp4/temp4";
+import { Card4 } from "./templates/temp4/Card4";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Route path="/temp2" element={<Temp2 />} />
       <Route path="/card3" element={<Card3 />} />
       <Route path="/temp3" element={<Temp3 />} />
+      <Route path="/Card4" element={<Card4 />} />
+      <Route path="/temp4" element={<Temp4 />} />
     </Routes>
   );
 }
